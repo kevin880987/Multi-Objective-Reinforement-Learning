@@ -1,8 +1,4 @@
----
-title: Talk slides template
-tags: Templates, Talk
-description: View the slide with "Slide Mode".
----
+
 
 # Multi-Objective Reinforement Learning
 
@@ -20,47 +16,32 @@ slide: https://hackmd.io/@9KCqffEFR4C4AfiS32x7EQ/r1MKItbCI
 ![](https://i.imgur.com/fNXVuXZ.png)
 
 ---
+### Challenges of RL
 
-### 70% of our users are developers. Developers :heart: GitHub.
+Despite of many advances in RL theory and algorithms, one remained challenge is to scale up to larger and more complex problems. 
+The scaling problem for sequential decision-making mainly includes the following aspects:
+
+1. Large or continuous state or action space
+1. Hierarchically organized tasks and sub-tasks
+1. To solve several tasks with different rewards simultaneously
+> Multi-objective reinforcement learning (MORL) problem
 
 ---
 
-{%youtube E8Nj7RwXf0s %}
+### Multi-Objective Reinforcement Learning (MORL)
+
+A combination of multi-objective optimization (MOO) and RL techniques to solve the sequential decision-making problems with multiple conflicting objectives
+
+1. Obtain action policies which optimizes two or more objectives at the same time
+1. Each objective has its own associated reward signal
+1. The reward is not a scalar value but a vector
+1. Combine the objectives if they are related
+1. Optimize the objectives separately if they are completely unrelated
+1. Make a trade-off among the conflicting objectives
 
 ---
 
-### Usage flow
 
----
-
-
-```graphviz
-digraph {
-  compound=true
-  rankdir=RL
-
-  graph [ fontname="Source Sans Pro", fontsize=20 ];
-  node [ fontname="Source Sans Pro", fontsize=18];
-  edge [ fontname="Source Sans Pro", fontsize=12 ];
-
-
-  subgraph core {
-    c [label="Hackmd-it \ncore"] [shape=box]
-  }
-  
-  c -> sync [ltail=session lhead=session]
-
-  subgraph cluster1 {
-     concentrate=true
-    a [label="Text source\nGithub, Gitlab, ..."] [shape=box]
-    b [label="HackMD Editor"] [shape=box]
-    sync [label="sync" shape=plaintext ]
-    b -> sync  [dir="both"]
-    sync -> a [dir="both"]
-    label="An edit session"
-  }
-}
-```
 
 ---
 
