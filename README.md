@@ -2,8 +2,6 @@
 
 # Multi-Objective Reinforement Learning
 
-slide: https://hackmd.io/@9KCqffEFR4C4AfiS32x7EQ/r1MKItbCI
-
 <br>
 
 ---
